@@ -37,8 +37,7 @@ const bar = d => svg`<rect
   height=${height - y(d.value)}
   >`;
 
-// const bars = svg`${repeat(data, d => d.name, bar)}`;
-const bars = svg`${data.map(bar)}`;
+const bars = svg`${repeat(data, d => d.name, bar)}`;
 
 const chart = svg`
   <svg width=${width + 2 * padding} height=${height + 2 * padding}>
